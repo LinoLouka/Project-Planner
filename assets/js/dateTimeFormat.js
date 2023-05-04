@@ -1,6 +1,6 @@
 export function getTimeFormat(dateTime) {
   const dateActuelle = new Date(
-    Date(dateTime).toLocaleString("fr-BE", {
+    new Date(dateTime).toLocaleString("fr-BE", {
       timeZone: `${Intl.DateTimeFormat().resolvedOptions().timeZone}`,
     })
   );
