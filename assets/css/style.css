@@ -1,1 +1,63 @@
-/*# sourceMappingURL=style.css.map */
+body {
+  font-family: "Sigmar", cursive;
+}
+body header {
+  background-color: grey;
+  border-radius: 10px;
+  font-family: "Bruno Ace SC", cursive;
+}
+body header form {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+body header form #title {
+  background-color: brown;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+body header form #content {
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: aquamarine;
+}
+body header form select {
+  list-style-type: none;
+}
+body header form select option img {
+  max-width: 20%;
+}
+body header form select button {
+  border-radius: 20px;
+}
+body main {
+  font-size: 12px;
+}
+body main .displayToDo {
+  margin: auto;
+  width: 90%;
+  border: grey solid 3px;
+  border-radius: 30px;
+  padding: 30px 0;
+}
+body main .displayToDo__articleTodo {
+  border-radius: 10px;
+  margin: auto;
+  height: 150px;
+  border: blue solid 5px;
+  width: 85%;
+}
+body main .displayToDo .articleTodo__divImgTodo .bell {
+  background: url("../img/svg/bell.svg");
+}
+body main .displayToDo .articleTodo__divImgTodo .briefcase {
+  background: url("../img/svg/briefcase.svg");
+}
+body main .displayToDo .articleTodo__divImgTodo .clock {
+  background: url("../img/svg/clock.svg");
+}
+body main .displayToDo .articleTodo__divImgTodo .warning {
+  background: url("../img/svg/warning.svg");
+}/*# sourceMappingURL=style.css.map */

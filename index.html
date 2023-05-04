@@ -6,12 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project Planner</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Sigmar&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <form>
         <input type="text" name="title" id="title" placeholder="Title" />
-        <input type="text" name="content" id="content" placeholder="Content" />
+        <textarea
+          type="text"
+          name="content"
+          id="content"
+          placeholder="Content"
+          cols="20"
+          rows="3"
+        ></textarea>
+        <select>
+          <option data-id="1" class="bell">
+            bell
+            <!-- <img src="./assets/img/svg/bell.svg" alt="" /> -->
+          </option>
+          <option data-id="2" class="briefcase">
+            briefcase
+            <!-- <img src="./assets/img/svg/briefcase.svg" alt="" /> -->
+          </option>
+          <option data-id="3" class="clock">
+            clock
+            <!-- <img src="./assets/img/svg/clock.svg" alt="" /> -->
+          </option>
+          <option data-id="4" class="warning">
+            warning
+            <!-- <img src="./assets/img/svg/warning.svg" alt="" /> -->
+          </option>
+        </select>
         <input type="datetime-local" name="date" id="date" />
         <button type="submit">submit</button>
       </form>
