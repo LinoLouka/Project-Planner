@@ -8,7 +8,26 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <main></main>
+    <header>
+      <form>
+        <input type="text" name="title" id="title" placeholder="Title" />
+        <input type="text" name="content" id="content" placeholder="Content" />
+        <input type="datetime-local" name="date" id="date" />
+        <button type="submit">submit</button>
+      </form>
+    </header>
+    <main>
+      <section class="filterSort">
+        <div class="filterSort__filter"></div>
+        <div class="filterSort__sort"></div>
+      </section>
+      <section class="displayToDo">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta enim
+        inventore, alias amet sint nobis atque voluptate voluptatem! Harum iste
+        vero ipsa, quod error in! Expedita ipsum cumque exercitationem
+        dignissimos?
+      </section>
+    </main>
   </body>
-  <script src="./assets/js/script.js"></script>
+  <script defer type="module" src="./assets/js/script.js"></script>
 </html>
