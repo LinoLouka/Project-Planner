@@ -10,7 +10,5 @@ export function displayHtml(listToDo) {
     divImgTodo.className = "articleTodo__divImgTodo";
     divContentTodo.className = "articleTodo__divContentTodo";
     divFuncTodo.className = "articleTodo__divFuncTodo";
-    
   });
 }
-+
