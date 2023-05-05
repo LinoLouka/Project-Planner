@@ -20,7 +20,8 @@ export function displayHtml(listToDo) {
     <span class="divContentTodo__States ${toDo.states
       .toLowerCase()
       .replace(" ", "")}"> ${toDo.states}</span>`;
-    divFuncTodo.innerHTML = `<div>TEST TEST</div>`;
+    divFuncTodo.innerHTML = `<div id="todo_delete"></div>
+    <div id="todo_modify"></div>`;
 
     articleToDo.appendChild(divImgTodo);
     articleToDo.appendChild(divContentTodo);

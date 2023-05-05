@@ -1,4 +1,5 @@
 body {
+  max-width: 95vw;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 body header {
@@ -38,24 +39,32 @@ body main {
 body main .displayToDo {
   margin: auto;
   width: 90%;
-  border: grey solid 3px;
+  border: grey solid 2px;
   border-radius: 30px;
   padding: 30px 0;
 }
 body main .displayToDo__articleTodo {
-  border-radius: 10px;
   margin: auto;
+  margin-bottom: 10px;
   height: 150px;
-  border: blue solid 5px;
-  width: 85%;
+  border: rgba(66, 66, 66, 0.546) solid 1px;
+  box-shadow: 7px -2px 13px 0px #bbbbbb;
+  width: 90%;
+  padding: 10px;
   display: grid;
-  grid-template-areas: "img con con fun" "img con con fun";
+  grid-template-areas: "img con con" "fun con con" "fun con con";
+}
+body main .displayToDo__articleTodo:first-child {
+  border-radius: 10px 10px 0 0;
+}
+body main .displayToDo__articleTodo:last-child {
+  border-radius: 0 0 10px 10px;
 }
 body main .displayToDo__articleTodo .articleTodo__divImgTodo {
+  padding: 10px;
   grid-area: img;
-  height: 70px;
-  width: 70px;
   margin: auto;
+  background-size: contain;
 }
 body main .displayToDo__articleTodo .articleTodo__divImgTodo.bell {
   background: url("../img/svg/bell.svg");
@@ -71,21 +80,30 @@ body main .displayToDo__articleTodo .articleTodo__divImgTodo.warning {
 }
 body main .displayToDo__articleTodo .articleTodo__divContentTodo {
   grid-area: con;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-areas: "ti ti ti" "txt txt txt" "st da da";
+  justify-content: space-around;
+  border: 1px solid gray;
+  padding: 10px;
+  border-bottom: 0;
+  border-top: 0;
 }
-body main .displayToDo__articleTodo .articleTodo__divContentTodo > h4 {
+body main .displayToDo__articleTodo .articleTodo__divContentTodo h4 {
+  grid-area: ti;
   text-transform: capitalize;
   text-align: center;
   font-size: 1.3rem;
   margin: 0;
 }
+body main .displayToDo__articleTodo .articleTodo__divContentTodo .divContentTodo__contentTxt {
+  grid-area: txt;
+  overflow: scroll;
+}
 body main .displayToDo__articleTodo .articleTodo__divContentTodo .divContentTodo__States {
+  grid-area: st;
   border-radius: 0 10px 10px 0;
   text-align: center;
   vertical-align: middle;
-  margin-right: 75%;
   border: 2px dashed white;
 }
 body main .displayToDo__articleTodo .articleTodo__divContentTodo .divContentTodo__States.todo {
@@ -97,6 +115,33 @@ body main .displayToDo__articleTodo .articleTodo__divContentTodo .divContentTodo
 body main .displayToDo__articleTodo .articleTodo__divContentTodo .divContentTodo__States.done {
   background-color: rgb(63, 215, 25);
 }
+body main .displayToDo__articleTodo .articleTodo__divContentTodo .divContentTodo__date {
+  grid-area: da;
+  margin-left: 5%;
+}
 body main .displayToDo__articleTodo .articleTodo__divFuncTodo {
+  padding: 10px;
   grid-area: fun;
+  position: relative;
+  width: 35px;
+}
+body main .displayToDo__articleTodo .articleTodo__divFuncTodo #todo_delete {
+  cursor: pointer;
+  position: absolute;
+  background-color: red;
+  height: 10px;
+  width: 55px;
+  border-radius: 20px;
+  left: -5px;
+  top: 20px;
+}
+body main .displayToDo__articleTodo .articleTodo__divFuncTodo #todo_modify {
+  cursor: pointer;
+  position: absolute;
+  background-color: rgb(0, 8, 255);
+  height: 10px;
+  width: 100%;
+  border-radius: 20px;
+  left: -5px;
+  top: 40px;
 }/*# sourceMappingURL=style.css.map */
