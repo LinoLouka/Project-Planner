@@ -1,4 +1,3 @@
-import { getTimeFormat } from "./dateTimeFormat.js";
 export function displayHtml(listToDo) {
   const sectionDisplayToDo = document.querySelector(".displayToDo");
 
@@ -11,13 +10,9 @@ export function displayHtml(listToDo) {
     divImgTodo.className = `articleTodo__divImgTodo ${toDo.img}`;
     divContentTodo.className = "articleTodo__divContentTodo";
     divFuncTodo.className = "articleTodo__divFuncTodo";
-    divContentTodo.innerHTML = `<h4 class="divContentTodo__title">${
-      toDo.title
-    }</h4>
+    divContentTodo.innerHTML = `<h4 class="divContentTodo__title">${toDo.title}</h4>
     <span class="divContentTodo__contentTxt">${toDo.contentTxt}</span>  
-    <input type="datetime-local" class="divContentTodo__date" value="${getTimeFormat(
-      toDo.date
-    )}">
+    <input type="datetime-local" class="divContentTodo__date" value="${toDo.date}">
     `;
 
     articleToDo.appendChild(divImgTodo);
