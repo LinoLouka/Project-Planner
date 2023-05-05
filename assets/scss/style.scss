@@ -1,5 +1,9 @@
+// * {
+//   border: 2px solid black;
+// }
 body {
-  font-family: "Sigmar", cursive;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   header {
     background-color: grey;
     border-radius: 10px;
@@ -47,20 +51,59 @@ body {
         height: 150px;
         border: blue solid 5px;
         width: 85%;
-      }
+        display: grid;
+        grid-template-areas:
+          "img con con fun"
+          "img con con fun";
+        .articleTodo__divImgTodo {
+          grid-area: img;
+          height: 70px;
+          width: 70px;
+          margin: auto;
+          &.bell {
+            background: url("../img/svg/bell.svg");
+          }
+          &.briefcase {
+            background: url("../img/svg/briefcase.svg");
+          }
+          &.clock {
+            background: url("../img/svg/clock.svg");
+          }
+          &.warning {
+            background: url("../img/svg/warning.svg");
+          }
+        }
+        .articleTodo__divContentTodo {
+          grid-area: con;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          & > h4 {
+            text-transform: capitalize;
+            text-align: center;
+            font-size: 1.3rem;
+            margin: 0;
+          }
 
-      .articleTodo__divImgTodo {
-        .bell {
-          background: url("../img/svg/bell.svg");
+          .divContentTodo__States {
+            border-radius: 0 10px 10px 0;
+            text-align: center;
+            vertical-align: middle;
+            margin-right: 75%;
+            border: 2px dashed white;
+            &.todo {
+              background-color: rgb(61, 145, 200);
+            }
+            &.doing {
+              background-color: rgb(245, 245, 10);
+            }
+            &.done {
+              background-color: rgb(63, 215, 25);
+            }
+          }
         }
-        .briefcase {
-          background: url("../img/svg/briefcase.svg");
-        }
-        .clock {
-          background: url("../img/svg/clock.svg");
-        }
-        .warning {
-          background: url("../img/svg/warning.svg");
+        .articleTodo__divFuncTodo {
+          grid-area: fun;
         }
       }
     }

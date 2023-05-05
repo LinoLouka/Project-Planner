@@ -1,5 +1,5 @@
 body {
-  font-family: "Sigmar", cursive;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 body header {
   background-color: grey;
@@ -48,16 +48,55 @@ body main .displayToDo__articleTodo {
   height: 150px;
   border: blue solid 5px;
   width: 85%;
+  display: grid;
+  grid-template-areas: "img con con fun" "img con con fun";
 }
-body main .displayToDo .articleTodo__divImgTodo .bell {
+body main .displayToDo__articleTodo .articleTodo__divImgTodo {
+  grid-area: img;
+  height: 70px;
+  width: 70px;
+  margin: auto;
+}
+body main .displayToDo__articleTodo .articleTodo__divImgTodo.bell {
   background: url("../img/svg/bell.svg");
 }
-body main .displayToDo .articleTodo__divImgTodo .briefcase {
+body main .displayToDo__articleTodo .articleTodo__divImgTodo.briefcase {
   background: url("../img/svg/briefcase.svg");
 }
-body main .displayToDo .articleTodo__divImgTodo .clock {
+body main .displayToDo__articleTodo .articleTodo__divImgTodo.clock {
   background: url("../img/svg/clock.svg");
 }
-body main .displayToDo .articleTodo__divImgTodo .warning {
+body main .displayToDo__articleTodo .articleTodo__divImgTodo.warning {
   background: url("../img/svg/warning.svg");
+}
+body main .displayToDo__articleTodo .articleTodo__divContentTodo {
+  grid-area: con;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body main .displayToDo__articleTodo .articleTodo__divContentTodo > h4 {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 0;
+}
+body main .displayToDo__articleTodo .articleTodo__divContentTodo .divContentTodo__States {
+  border-radius: 0 10px 10px 0;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 75%;
+  border: 2px dashed white;
+}
+body main .displayToDo__articleTodo .articleTodo__divContentTodo .divContentTodo__States.todo {
+  background-color: rgb(61, 145, 200);
+}
+body main .displayToDo__articleTodo .articleTodo__divContentTodo .divContentTodo__States.doing {
+  background-color: rgb(245, 245, 10);
+}
+body main .displayToDo__articleTodo .articleTodo__divContentTodo .divContentTodo__States.done {
+  background-color: rgb(63, 215, 25);
+}
+body main .displayToDo__articleTodo .articleTodo__divFuncTodo {
+  grid-area: fun;
 }/*# sourceMappingURL=style.css.map */
