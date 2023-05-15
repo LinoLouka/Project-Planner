@@ -1,6 +1,24 @@
 // * {
 //   border: 2px solid black;
 // }
+@media only screen and (max-width: 480px) {
+  .displayToDo__articleTodo {
+    height: 175px !important;
+    .articleTodo__divContentTodo {
+      grid-area: con;
+      display: grid;
+      grid-template-areas:
+        "ti ti ti"
+        "txt txt txt"
+        "st st vide "
+        "da da da " !important;
+      .divContentTodo__States {
+        width: 100px;
+      }
+    }
+  }
+}
+
 body {
   max-width: 95vw;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -39,6 +57,28 @@ body {
     }
   }
   main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    .filterSort {
+      background-color: darkcyan;
+      min-height: 100px;
+      margin: 10px 0;
+      width: 90%;
+      border: grey solid 2px;
+      border-radius: 30px;
+      display: flex;
+      &__filter {
+        ul {
+          li {
+            background-color: gold;
+          }
+        }
+      }
+      &__sort {
+      }
+    }
     font-size: 12px;
     .displayToDo {
       margin: auto;
@@ -91,6 +131,8 @@ body {
             "ti ti ti"
             "txt txt txt"
             "st da da";
+          justify-content: center;
+          align-content: center;
           justify-content: space-around;
           border: 1px solid gray;
           padding: 10px;
@@ -104,13 +146,17 @@ body {
             margin: 0;
           }
           .divContentTodo__contentTxt {
+            box-sizing: border-box;
             grid-area: txt;
-            overflow: scroll;
+            overflow: hidden;
+            max-height: 90px;
           }
 
           .divContentTodo__States {
+            display: flex;
             grid-area: st;
-            border-radius: 0 10px 10px 0;
+            height: 26px;
+            border-radius: 10px;
             text-align: center;
             vertical-align: middle;
             border: 2px dashed white;

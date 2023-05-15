@@ -1,3 +1,5 @@
+import { getCorrectDateFormat } from "./dateTimeFormat.js";
+
 const states = ["To Do", "Doing", "Done"];
 const svg = { 1: "bell", 2: "briefcase", 3: "clock", 4: "warning" };
 export const objetListToDo = [
@@ -13,7 +15,7 @@ export const objetListToDo = [
   },
   {
     id: 2,
-    title: "titre 2",
+    title: "titre 6",
     contentTxt:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta enim inventore, alias amet sint nobis atque voluptate voluptatem!",
     date: "2023-09-30T14:50",
@@ -23,7 +25,7 @@ export const objetListToDo = [
   },
   {
     id: 3,
-    title: "titre 3",
+    title: "titre 9",
     contentTxt:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta enim inventore, alias amet sint nobis atque voluptate voluptatem!",
     date: "2023-06-11T12:24",

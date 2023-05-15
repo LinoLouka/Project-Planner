@@ -1,9 +1,12 @@
 //Import
 import { displayHtml } from "./displayHtml.js";
 import { objetListToDo } from "./objetListToDo.js";
+import { sortTodoByKey } from "./sortTodoByKey.js";
 
-//Date, heure
+let mainListToDo = objetListToDo;
 
-document.getElementById("date").value = new Date().toISOString().slice(0, 16);
+displayHtml(mainListToDo);
 
-displayHtml(objetListToDo);
+mainListToDo = sortTodoByKey(objetListToDo, "img");
+
+displayHtml(mainListToDo);

@@ -1,5 +1,11 @@
+import { getCorrectDateFormat } from "./dateTimeFormat.js";
+
 export function displayHtml(listToDo) {
   const sectionDisplayToDo = document.querySelector(".displayToDo");
+  sectionDisplayToDo.innerHTML = "";
+
+  //Date, heure
+  document.getElementById("date").value = getCorrectDateFormat();
 
   listToDo.forEach((toDo) => {
     let articleToDo = document.createElement("article");
