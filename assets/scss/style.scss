@@ -63,17 +63,30 @@ body {
     align-items: center;
     .filterSort {
       background-color: darkcyan;
-      min-height: 100px;
+      min-height: 180px;
       margin: 10px 0;
       width: 90%;
       border: grey solid 2px;
       border-radius: 30px;
       display: flex;
       &__filter {
-        ul {
-          li {
-            background-color: gold;
+        width: 130px;
+        margin: 5px 30px;
+        box-sizing: content-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .visibility_hide {
+          display: none;
+        }
+        label {
+          cursor: pointer;
+          &:hover {
+            background-color: transparent;
+            scale: 1.2;
+            transition: all 0.5s ease;
           }
+          background-color: gold;
         }
       }
       &__sort {
@@ -180,7 +193,7 @@ body {
           grid-area: fun;
           position: relative;
           width: 35px;
-          #todo_delete {
+          .todo_delete {
             cursor: pointer;
             position: absolute;
             background-color: red;
@@ -190,7 +203,7 @@ body {
             left: -5px;
             top: 20px;
           }
-          #todo_modify {
+          .todo_modify {
             cursor: pointer;
             position: absolute;
             background-color: rgb(0, 8, 255);

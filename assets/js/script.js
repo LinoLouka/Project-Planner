@@ -8,5 +8,11 @@ let mainListToDo = objetListToDo;
 displayHtml(mainListToDo);
 
 mainListToDo = sortTodoByKey(objetListToDo, "img");
+document.querySelectorAll(".visibility_hide").forEach((e) => {
+  e.addEventListener("change", () => {
+    console.log("test");
+    e.parentElement.style.backgroundColor = "red";
+  });
+});
 
 displayHtml(mainListToDo);

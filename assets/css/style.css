@@ -55,15 +55,32 @@ body main {
 }
 body main .filterSort {
   background-color: darkcyan;
-  min-height: 100px;
+  min-height: 180px;
   margin: 10px 0;
   width: 90%;
   border: grey solid 2px;
   border-radius: 30px;
   display: flex;
 }
-body main .filterSort__filter ul li {
+body main .filterSort__filter {
+  width: 130px;
+  margin: 5px 30px;
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+body main .filterSort__filter .visibility_hide {
+  display: none;
+}
+body main .filterSort__filter label {
+  cursor: pointer;
   background-color: gold;
+}
+body main .filterSort__filter label:hover {
+  background-color: transparent;
+  scale: 1.2;
+  transition: all 0.5s ease;
 }
 body main .displayToDo {
   margin: auto;
@@ -160,7 +177,7 @@ body main .displayToDo__articleTodo .articleTodo__divFuncTodo {
   position: relative;
   width: 35px;
 }
-body main .displayToDo__articleTodo .articleTodo__divFuncTodo #todo_delete {
+body main .displayToDo__articleTodo .articleTodo__divFuncTodo .todo_delete {
   cursor: pointer;
   position: absolute;
   background-color: red;
@@ -170,7 +187,7 @@ body main .displayToDo__articleTodo .articleTodo__divFuncTodo #todo_delete {
   left: -5px;
   top: 20px;
 }
-body main .displayToDo__articleTodo .articleTodo__divFuncTodo #todo_modify {
+body main .displayToDo__articleTodo .articleTodo__divFuncTodo .todo_modify {
   cursor: pointer;
   position: absolute;
   background-color: rgb(0, 8, 255);
